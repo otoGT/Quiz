@@ -1,5 +1,6 @@
 import React from 'react';
 import Category from './Components/Basic';
+//https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=boolean
 
 function App() {
 
