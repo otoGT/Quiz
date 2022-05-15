@@ -6,10 +6,9 @@ export default function Category() {
   const [difficult, setDifficult] = useState();
   const [type, setType] = useState();
   const url = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple';
-  const data = ""
 
   return (
-    <span className="relative z-0 inline-flex shadow-sm rounded-md">
+    <span id="Mainer" className="relative z-0 inline-flex shadow-sm rounded-md">
       <button
         type="button"
         onClick={UnHide}
@@ -31,7 +30,7 @@ export default function Category() {
           <option value="multiple">Multiple Choice</option>
           <option value="true.false">True/False</option>
         </select>
-        <button>Start Quiz</button>
+        <button onClick={UnMain}>Start Quiz</button>
       </div>
       <button
         type="button"
@@ -55,7 +54,7 @@ export default function Category() {
           <option value="multiple">Multiple Choice</option>
           <option value="true.false">True/False</option>
         </select>
-        <button>Start Quiz</button>
+        <button onClick={UnMain}>Start Quiz</button>
       </div>
       <button
         type="button"
@@ -79,7 +78,7 @@ export default function Category() {
           <option value="multiple">Multiple Choice</option>
           <option value="true.false">True/False</option>
         </select>
-        <button>Start Quiz</button>
+        <button onClick={UnMain}>Start Quiz</button>
       </div>
       <button
         type="button"
@@ -103,7 +102,7 @@ export default function Category() {
           <option value="multiple">Multiple Choice</option>
           <option value="true.false">True/False</option>
         </select>
-        <button>Start Quiz</button>
+        <button onClick={UnMain}>Start Quiz</button>
       </div>
       <button
         type="button"
@@ -127,7 +126,7 @@ export default function Category() {
           <option value="multiple">Multiple Choice</option>
           <option value="true.false">True/False</option>
         </select>
-        <button>Start Quiz</button>
+        <button onClick={UnMain}>Start Quiz</button>
       </div>
       <button
         type="button"
@@ -151,7 +150,7 @@ export default function Category() {
           <option value="multiple">Multiple Choice</option>
           <option value="true.false">True/False</option>
         </select>
-        <button>Start Quiz</button>
+        <button onClick={UnMain}>Start Quiz</button>
       </div>
     </span>
   )
@@ -178,5 +177,9 @@ export default function Category() {
   function UnHide5(){
     document.getElementById('Sport').classList.add('hidden')
     document.getElementById('after5').classList.remove('hidden')
+  }
+  function UnMain(){
+    document.getElementById('Main').classList.remove('hidden')
+    document.getElementById('Mainer').classList.add('hidden')
   }
 }
