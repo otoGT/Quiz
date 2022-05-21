@@ -1,14 +1,17 @@
-import React from 'react';
-import Category from './Components/Basic';
-import Questions from './Components/Questions';
+import { useState } from 'react';
+import QuestionCard from './Components/card';
+import QuestionMenu from './Components/Menu';
 
 function App() {
+    const [questions, setQuestions] = useState()
 
  return(
-    <div className='w-screen h-screen flex justify-center items-center align-center'>  
-     <div className='m-auto'><Category/></div>
-     <div><Questions/></div>
-     </div>
+    <div className=''>  
+        <QuestionMenu insertQuestion={setQuestions}/>
+        {
+            questions && questions.results.map((item, index) => <QuestionCard key={index} questionObj={item} />)
+        }
+    </div>
  )
 }
 
