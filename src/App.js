@@ -1,7 +1,6 @@
 import React from 'react';
 import Category from './Components/Basic';
 import Questions from './Components/Questions';
-import Example from './Components/Simple table';
 
 function App() {
 
